@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Clientes</title>
+
+  <!-- Fuentes e Iconos Externos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Hoja de Estilos -->
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <main class="form-container">
+    <header class="form-header">
+      <h2><i class="fa-solid fa-user-plus"></i> Registro de Cliente</h2>
+      <p>Ingrese los datos para registrar la información en el sistema.</p>
+    </header>
+
+    <!-- Formulario Principal -->
+    <form id="form-cliente" class="fit-form" action="https://formspree.io/f/mqewqqpj" method="POST">
+      <div class="form-group">
+        <label for="nombre"><i class="fa-solid fa-user"></i> Nombre Completo</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email"><i class="fa-solid fa-envelope"></i> Correo Electrónico</label>
+          <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="telefono"><i class="fa-solid fa-phone"></i> Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="12345678" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="categoria"><i class="fa-solid fa-layer-group"></i> Categoría / Servicio</label>
+        <select id="categoria" name="categoria" required>
+          <option value="" disabled selected>Seleccione una opción...</option>
+          <option value="Opción A">Opción A</option>
+          <option value="Opción B">Opción B</option>
+          <option value="Opción C">Opción C</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn-submit">
+        <i class="fa-solid fa-paper-plane"></i> Guardar y Enviar
+      </button>
+    </form>
+
+    <!-- Visualización de Clientes Registrados -->
+    <section class="registros-section">
+      <h3><i class="fa-solid fa-list"></i> Clientes Registrados</h3>
+      <div class="tabla-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Correo</th>
+              <th>Teléfono</th>
+              <th>Categoría</th>
+            </tr>
+          </thead>
+          <tbody id="lista-clientes-body">
+            <!-- Datos renderizados mediante JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
