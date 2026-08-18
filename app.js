@@ -2,15 +2,11 @@ document.addEventListener('DOMContentLoaded', () => {
   mostrarClientes();
   cargarFraseExterna();
 });
-
-// Manejo de envío, guardado local y redirección
 document.getElementById('form-cliente').addEventListener('submit', function (e) {
   e.preventDefault();
 
   const form = e.target;
   const formData = new FormData(form);
-
-  // 1. Guardar localmente en localStorage
   const nuevoCliente = {
     nombre: document.getElementById('nombre').value,
     email: document.getElementById('email').value,
@@ -22,7 +18,6 @@ document.getElementById('form-cliente').addEventListener('submit', function (e) 
   clientes.push(nuevoCliente);
   localStorage.setItem('clientes', JSON.stringify(clientes));
 
-  // 2. Enviar a Formspree y redirigir a index.html
   fetch('https://formspree.io/f/mqewqqpj', {
     method: 'POST',
     body: formData,
@@ -43,7 +38,6 @@ document.getElementById('form-cliente').addEventListener('submit', function (e) 
   });
 });
 
-// Mostrar los datos en la tabla
 function mostrarClientes() {
   const tbody = document.getElementById('lista-clientes-body');
   const clientes = JSON.parse(localStorage.getItem('clientes')) || [];
@@ -63,7 +57,6 @@ function mostrarClientes() {
   `).join('');
 }
 
-// Consumo de API externa
 function cargarFraseExterna() {
   fetch('https://api.quotable.io/random')
     .then(res => res.json())
