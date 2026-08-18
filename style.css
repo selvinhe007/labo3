@@ -1,4 +1,4 @@
-/* Reset Básico */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,7 +11,7 @@ body {
   color: #ffffff;
 }
 
-/* Encabezado */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -38,7 +38,6 @@ body {
   color: #ff3e3e;
 }
 
-/* Entrada Principal (Hero) */
 .hero {
   background-color: #1a1a1a;
   text-align: center;
@@ -62,7 +61,6 @@ body {
   gap: 1rem;
 }
 
-/* Botones */
 .btn {
   padding: 0.7rem 1.2rem;
   border-radius: 4px;
@@ -81,7 +79,7 @@ body {
   color: #ffffff;
 }
 
-/* Categorías (Hombres / Mujeres) */
+
 .container {
   max-width: 900px;
   margin: 2rem auto;
