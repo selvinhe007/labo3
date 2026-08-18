@@ -1,4 +1,4 @@
-/* Estilos Base */
+
 body {
   font-family: Arial, sans-serif;
   background-color: #121212;
@@ -8,7 +8,7 @@ body {
   padding: 20px;
 }
 
-/* Contenedor Principal */
+
 .form-container {
   background-color: #1e1e1e;
   width: 100%;
@@ -27,7 +27,6 @@ body {
   color: #e50914;
 }
 
-/* Formulario */
 .form-group {
   margin-bottom: 15px;
 }
@@ -62,7 +61,6 @@ input:focus, select:focus {
   border-color: #e50914;
 }
 
-/* Botón */
 .btn-submit {
   width: 100%;
   padding: 12px;
@@ -78,7 +76,6 @@ input:focus, select:focus {
   background-color: #b80710;
 }
 
-/* Tabla de Clientes */
 .registros-section {
   margin-top: 25px;
   padding-top: 15px;
@@ -102,7 +99,7 @@ th {
   color: #e50914;
 }
 
-/* Responsivo para celulares */
+
 @media (max-width: 500px) {
   .form-row {
     flex-direction: column;
